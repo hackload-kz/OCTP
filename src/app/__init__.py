@@ -95,10 +95,8 @@ def create_app(settings: Settings) -> fastapi.FastAPI:
         return JSONResponse({"message": "ok"})
 
     # setup routers
-    from ._auth.api import router as auth_router
-    # from .accounts.api import router as accounts_router
+    # from .users.api import router as accounts_router
 
-    app.include_router(auth_router, prefix="/v1")
     # app.include_router(accounts_router, prefix="/v1")
 
     # security middleswares
